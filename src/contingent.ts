@@ -96,3 +96,16 @@ export function pick<T>(list: T[], num: number): T[] {
 export function generate<T>(len: number, randomizer: () => T) {
   return new Array(len).fill(0).map(randomizer)
 }
+
+export default {
+  randomBit,
+  randomByte,
+  randomInt,
+  randomUInt,
+  randomFloat,
+  randomIn,
+  randomOf,
+  shuffle,
+  pick,
+  generate,
+}
