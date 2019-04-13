@@ -4,7 +4,9 @@
   "description": "Create cryptographically-strong random numbers in node.js or the browser",
   "main": "build/index.js",
   "scripts": {
-    "test": "mocha"
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "test": "mocha build/**/*.spec.js"
   },
   "repository": {
     "type": "git",
