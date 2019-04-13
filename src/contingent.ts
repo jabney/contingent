@@ -41,8 +41,8 @@ export function randomFloat(): number {
 /**
  * Return a positive random number in the range [min, max).
  *
- * @param value the minimum value
- * @param max the maximum value, inclusive
+ * @param value the minimum value >= 0
+ * @param max the maximum value, inclusive >= value
  */
 export function randomIn(min: number, max: number): number {
   if (min < 0 || max < 0) {
@@ -82,7 +82,10 @@ export function pick<T>(list: T[], num: number): T[] {
     throw new Error(`num should be in the range [0, ${list.length}]`)
   }
 
+  // Copy the given array.
   const copy = list.slice()
+  // Shuffle the copy.
   shuffle(copy)
+  // Return the last n elements.
   return copy.slice(-num)
 }
