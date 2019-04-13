@@ -89,3 +89,10 @@ export function pick<T>(list: T[], num: number): T[] {
   // Return the last n elements.
   return copy.slice(-num)
 }
+
+/**
+ * Generate an array of _n_ random values with a generator function.
+ */
+export function generate<T>(len: number, randomizer: () => T) {
+  return new Array(len).fill(0).map(randomizer)
+}
