@@ -77,17 +77,14 @@ export function shuffle<T>(list: T[]): T[] {
 /**
  * Pick _n_ random values from a list.
  */
-export function pick<T>(list: T[], num: number): T[] {
-  if (num < 0 || num > list.length) {
+export function pick<T>(n: number, list: T[]): T[] {
+  if (n < 0 || n > list.length) {
     throw new Error(`num should be in the range [0, ${list.length}]`)
   }
 
-  // Copy the given array.
   const copy = list.slice()
-  // Shuffle the copy.
   shuffle(copy)
-  // Return the last n elements.
-  return copy.slice(-num)
+  return copy.slice(-n)
 }
 
 /**
