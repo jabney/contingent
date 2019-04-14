@@ -97,6 +97,17 @@ export function generate<T>(len: number, randomizer: () => T): T[] {
   return new Array(len).fill(0).map(randomizer)
 }
 
+/**
+ * Roll a die of _n_ sides.
+ */
+export function roll(n: number) {
+  if (n <= 0) {
+    throw new Error('<roll> sides should be >= 1')
+  }
+
+  return randomIn(1, n + 1)
+}
+
 export default {
   randomBit,
   randomByte,
