@@ -42,15 +42,17 @@ export function randomFloat(): number {
  * Return a positive random number in the range [min, max).
  *
  * @param value the minimum value >= 0
- * @param max the maximum value, inclusive >= value
+ * @param max the maximum value, exclusive >= value
  */
 export function randomIn(min: number, max: number): number {
   if (min < 0 || max < 0) {
     throw new Error('min and max should be >= 0')
   }
+
   if (max < min) {
     throw new Error('max should be >= min')
   }
+
   return min + Math.floor((max - min) * randomFloat())
 }
 
