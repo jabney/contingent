@@ -1,6 +1,6 @@
 import { ICryptoLib } from './crypto-lib.interface'
-import bufferLib from './buffer-lib'
-import dataviewLib from './dataview-lib'
+import bufferLib from './node-lib'
+import dataviewLib from './browser-lib'
 
 // https://stackoverflow.com/a/31090240/1861779
 const isBrowser = new Function('try {return this===window} catch(e) {return false}')
