@@ -66,6 +66,17 @@ export function randomOf<T>(list: T[]): T {
 }
 
 /**
+ * Roll a die of _n_ sides.
+ */
+export function roll(n: number) {
+  if (n <= 0) {
+    throw new Error('<roll> sides should be >= 1')
+  }
+
+  return randomIn(1, n + 1)
+}
+
+/**
  * Shuffle elements of an array in place.
  */
 export function shuffle<T>(list: T[]): T[] {
@@ -94,17 +105,6 @@ export function pick<T>(n: number, list: T[]): T[] {
  */
 export function generate<T>(len: number, create: () => T): T[] {
   return new Array(len).fill(0).map(create)
-}
-
-/**
- * Roll a die of _n_ sides.
- */
-export function roll(n: number) {
-  if (n <= 0) {
-    throw new Error('<roll> sides should be >= 1')
-  }
-
-  return randomIn(1, n + 1)
 }
 
 export default {
