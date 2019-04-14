@@ -93,7 +93,7 @@ export function pick<T>(list: T[], num: number): T[] {
 /**
  * Generate an array of _n_ random values with a generator function.
  */
-export function generate<T>(len: number, randomizer: () => T) {
+export function generate<T>(len: number, randomizer: () => T): T[] {
   return new Array(len).fill(0).map(randomizer)
 }
 
