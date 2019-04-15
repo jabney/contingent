@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import { ICryptoLib } from './crypto-lib.interface'
+import { ICryptoLib } from './crypto-lib'
 
 /**
  * Return a Buffer of _n_ random bytes.

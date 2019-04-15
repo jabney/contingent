@@ -1,5 +1,5 @@
 import { core } from './core'
-import lib from './node-lib'
+import lib from './browser-lib'
 
 const {
   randomBytes: _randomBytes,
@@ -21,9 +21,9 @@ const {
  *
  * @param n the number of bytes to return
  */
-function randomBytes(n: number): Buffer  {
-  // Cast the return value to a Buffer.
-  return _randomBytes(n) as Buffer
+function randomBytes(n: number): DataView  {
+  // Cast the return value to a DataView.
+  return _randomBytes(n) as DataView
 }
 
 export {

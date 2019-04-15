@@ -1,4 +1,4 @@
-import { ICryptoLib } from './crypto-lib.interface'
+import { ICryptoLib } from './crypto-lib'
 
 /**
  * Return a DataView of _n_ random bytes.
