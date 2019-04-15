@@ -18,7 +18,8 @@
     "strong",
     "random",
     "numbers",
-    "browser"
+    "browser",
+    "contingent"
   ],
   "author": "James Abney",
   "license": "MIT",
