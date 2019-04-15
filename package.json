@@ -5,8 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf build",
-    "test": "mocha build/**/*.spec.js"
+    "clean": "rm -rf lib",
+    "test": "mocha lib/**/*.spec.js"
   },
   "repository": {
     "type": "git",
