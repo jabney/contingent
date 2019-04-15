@@ -2,7 +2,7 @@
   "name": "contingent",
   "version": "0.0.1",
   "description": "Create cryptographically-strong random numbers in node.js or the browser",
-  "main": "build/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf lib",
