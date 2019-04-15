@@ -182,7 +182,7 @@ randomFloat() // 0.14995522797107697
 
 ### `randomIn`
 
-Return a positive integer in the range [min, max).
+Return an integer in the range [min, max), where max >= min.
 
 Signature:
 
