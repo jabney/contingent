@@ -49,9 +49,9 @@ function randomFloat(crypto: ICryptoLib): number {
  *
  */
 function randomIn(crypto: ICryptoLib, min: number, max: number): number {
-  if (min < 0 || max < 0) {
-    throw new Error('min and max should be >= 0')
-  }
+  // if (min < 0 || max < 0) {
+  //   throw new Error('min and max should be >= 0')
+  // }
 
   if (max < min) {
     throw new Error('max should be >= min')
@@ -138,10 +138,10 @@ export function core(crypto: ICryptoLib) {
      */
     randomFloat: () => randomFloat(crypto),
     /**
-     * Return a positive random number in the range [min, max).
+     * Return a random integer in the range [min, max).
      *
-     * @param min the minimum value >= 0
-     * @param max the maximum value, exclusive >= value
+     * @param min the minimum value
+     * @param max the maximum value, exclusive (max >= min)
      */
     randomIn: (min: number, max: number) => randomIn(crypto, min, max),
     /**
