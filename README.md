@@ -120,6 +120,17 @@ const array = Array.from(new Uint8Array(bytes.buffer))
 console.log(array) // [ 108, 183, 120, 227 ]
 ```
 
+The `toArray` helper can also be used, which works for either Buffer or DataView:
+
+```typescript
+import { toArray } from 'contingent/lib/utils'
+
+const bytes = randomBytes(4)
+const array = toArray(bytes)
+
+console.log(bytes) // [2, 191, 57, 66]
+```
+
 ### `randomBit`
 
 Return a random `boolean`.
