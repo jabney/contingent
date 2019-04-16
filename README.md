@@ -71,7 +71,7 @@ The `browser` module uses `window.crypto` with a fallback of `window.msCrypto`. 
 
 ### `randomBytes`
 
-Return n random bytes as a `Buffer` or `DataView`, depending on
+Return n random bytes as a `Buffer` or `DataView`, depending on how `contingent` is imported.
 
 Signature:
 
