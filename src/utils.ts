@@ -8,3 +8,10 @@ export function swap(list: any[], a: number, b: number) {
   list[b] = temp
   return list
 }
+
+export function toArray(obj: Buffer|DataView) {
+  if (obj instanceof DataView) {
+    return Array.from(new Uint8Array(obj.buffer))
+  }
+  return Array.from(obj)
+}
