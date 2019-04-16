@@ -100,6 +100,26 @@ DataView {
   buffer: ArrayBuffer { byteLength: 10 } }
 ```
 
+#### Converting to Array
+
+Buffer (node):
+
+```typescript
+const bytes = randomBytes(4)
+const array = Array.from(bytes)
+
+console.log(array) // [ 132, 5, 38, 222 ]
+```
+
+DataView (browser):
+
+```typescript
+const bytes = randomBytes(8)
+const array = Array.from(new Uint8Array(bytes.buffer))
+
+console.log(array) // [ 108, 183, 120, 227 ]
+```
+
 ### `randomBit`
 
 Return a random `boolean`.
