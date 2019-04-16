@@ -114,7 +114,7 @@ console.log(array) // [ 132, 5, 38, 222 ]
 DataView (browser):
 
 ```typescript
-const bytes = randomBytes(8)
+const bytes = randomBytes(4)
 const array = Array.from(new Uint8Array(bytes.buffer))
 
 console.log(array) // [ 108, 183, 120, 227 ]
