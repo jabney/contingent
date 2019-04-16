@@ -40,3 +40,18 @@ export {
   pick,
   generate,
 }
+
+export default {
+  randomBytes,
+  randomBit,
+  randomByte,
+  randomInt,
+  randomUInt,
+  randomFloat,
+  randomIn,
+  roll,
+  randomOf,
+  shuffle,
+  pick,
+  generate,
+}
