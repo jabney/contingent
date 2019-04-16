@@ -30,7 +30,7 @@ contingent.randomByte() // 113
 contingent.randomOf([1, 2, 3, 4, 5]) // 4
 ```
 
-## Usage on the Browser
+## Usage in the Browser
 
 By default, `contingent` uses Node.js `crytpo` under the hood to generate random bytes:
 
