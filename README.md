@@ -295,6 +295,24 @@ const charList = [...'contingent']
 pick(3, charList) // [ 'i', 't', 'c' ]
 ```
 
+### `replace`
+
+Replace a random element in an array with a given value.
+
+Signature:
+
+```typescript
+export function replace<T>(list: T[], value: T): T[]
+```
+
+Usage:
+
+```typescript
+const array = [1, 2, 3, 4, 5]
+
+replace(array, 999) // [ 1, 2, 3, 999, 5 ]
+```
+
 ### `generate`
 
 Generate an array of arbitrary values.
