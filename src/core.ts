@@ -105,6 +105,15 @@ function pick<T>(crypto: ICryptoLib, n: number, list: T[]): T[] {
 /**
  *
  */
+function replace<T>(crypto: ICryptoLib, list: T[], value: T): T[] {
+  const elem = randomIn(crypto, 0, list.length)
+  list[elem] = value
+  return list
+}
+
+/**
+ *
+ */
 function generate<T>(len: number, create: CreateFn<T>): T[] {
   return new Array(len).fill(0).map(create)
 }
@@ -169,6 +178,13 @@ export function core(crypto: ICryptoLib) {
      * @param list the list to pick values from
      */
     pick: <T>(n: number, list: T[]) => pick(crypto, n, list),
+    /**
+     * Replace a random element in an arry with the given value.
+     *
+     * @param list the list to replace a random element in
+     * @param value the value to use as a replacement
+     */
+    replace: <T>(list: T[], value: T) => replace(crypto, list, value),
     /**
      * Generate an array of _n_ values with a generator function.
      *

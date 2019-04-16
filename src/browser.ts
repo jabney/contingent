@@ -13,6 +13,7 @@ const {
   randomOf,
   shuffle,
   pick,
+  replace,
   generate,
 } = core(lib)
 
@@ -38,6 +39,7 @@ export {
   randomOf,
   shuffle,
   pick,
+  replace,
   generate,
 }
 
@@ -53,5 +55,6 @@ export default {
   randomOf,
   shuffle,
   pick,
+  replace,
   generate,
 }
