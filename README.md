@@ -277,7 +277,7 @@ shuffle([1, 2, 3, 4, 5]) // [ 3, 4, 5, 2, 1 ]
 
 ### `pick`
 
-Pick _n_ values from an array at random.
+Pick _n_ values from an array at random. Will not produce duplicates.
 
 Signature:
 
