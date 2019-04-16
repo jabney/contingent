@@ -104,6 +104,24 @@ function pick<T>(crypto: ICryptoLib, n: number, list: T[]): T[] {
 /**
  *
  */
+function select<T>(crypto: ICryptoLib, n: number, list: T[]): T[] {
+  if (n < 0 || n > list.length) {
+    throw new Error(`num should be in the range [0, ${list.length}]`)
+  }
+
+  const indexes: number[] = []
+  const len = list.length
+
+  for (let i = 0; i < n; i++) {
+    indexes.push(randomIn(crypto, 0, len))
+  }
+
+  return indexes.map(i => list[i])
+}
+
+/**
+ *
+ */
 function replace<T>(crypto: ICryptoLib, list: T[], value: T): T[] {
   const elem = randomIn(crypto, 0, list.length)
   list[elem] = value
@@ -171,12 +189,19 @@ export function core(crypto: ICryptoLib) {
      */
     shuffle: <T>(list: T[]) => shuffle(crypto, list),
     /**
-     * Pick _n_ random values from a list.
+     * Pick _n_ random values from a list (no duplicates).
      *
      * @param n the number of values to pick from the list
      * @param list the list to pick values from
      */
     pick: <T>(n: number, list: T[]) => pick(crypto, n, list),
+    /**
+     * Pick _n_ random values from a list (allows duplicates).
+     *
+     * @param n the number of values to select from the list
+     * @param list the list to select values from
+     */
+    select: <T>(n: number, list: T[]) => select(crypto, n, list),
     /**
      * Replace a random element in an arry with the given value.
      *
