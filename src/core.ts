@@ -49,10 +49,6 @@ function randomFloat(crypto: ICryptoLib): number {
  *
  */
 function randomIn(crypto: ICryptoLib, min: number, max: number): number {
-  // if (min < 0 || max < 0) {
-  //   throw new Error('min and max should be >= 0')
-  // }
-
   if (max < min) {
     throw new Error('max should be >= min')
   }
