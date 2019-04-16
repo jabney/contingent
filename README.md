@@ -1,6 +1,6 @@
 # contingent
 
-**contingent** *(kən-tĭnˈjənt)* neither impossible nor necessary
+**contingent** (kən-tĭnˈjənt) _neither impossible nor necessary._
 
 Create cryptographically-strong random numbers in node.js or the browser. Includes several helpers for random number generation and working with arrays.
 
