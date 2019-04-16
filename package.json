@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf lib",
-    "test": "mocha lib/**/*.spec.js"
+    "test": "mocha lib/**/*.spec.js",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
