@@ -2,7 +2,9 @@
 
 **contingent** *(kən-tĭnˈjənt)* neither impossible nor necessary
 
-Create cryptographically-strong random numbers in node.js or the browser, and a few other helpers.
+Create cryptographically-strong random numbers in node.js or the browser. Includes several helpers for random number generation and working with arrays.
+
+_Written in TypeScript and targets ES2015 JavaScript_
 
 ## Installation
 
@@ -15,8 +17,9 @@ $ npm install contingent
 Import functions individulally:
 
 ```typescript
-import { randomBit, randomIn } from 'contingent'
+import { randomFloat, randomBit, randomIn } from 'contingent'
 
+randomFloat() // 0.2344958782196045
 randomBit() // true
 randomIn(1, 10) // 7
 ```
@@ -71,7 +74,7 @@ The `browser` module uses `window.crypto` with a fallback of `window.msCrypto`. 
 
 ### `randomBytes`
 
-Return n random bytes as a `Buffer` or `DataView`, depending on how `contingent` is imported.
+Return _n_ random bytes as a `Buffer` or `DataView`, depending on how `contingent` is imported.
 
 Signature:
 
@@ -128,7 +131,7 @@ import { toArray } from 'contingent/lib/utils'
 const bytes = randomBytes(4)
 const array = toArray(bytes)
 
-console.log(bytes) // [2, 191, 57, 66]
+console.log(array) // [2, 191, 57, 66]
 ```
 
 ### `randomBit`
@@ -240,7 +243,8 @@ export function randomOf<T>(list: T[]): T
 Usage:
 
 ```typescript
-randomOf(['r', 'a', 'n', 'd']) // 'a'
+randomOf(['r', 'a', 'n', 'd', 'o', 'm']) // 'a'
+randomOf([...'contingent']) // 'g'
 ```
 
 ### `roll`
@@ -257,6 +261,7 @@ Usage:
 
 ```typescript
 roll(6) // 2
+roll(20) // 17
 ```
 
 ### `shuffle`
@@ -272,7 +277,7 @@ export function shuffle<T>(list: T[]): T[]
 Usage:
 
 ```typescript
-shuffle([1, 2, 3, 4, 5]) // [ 3, 4, 5, 2, 1 ]
+shuffle([1, 2, 3, 4, 5]) // [ 3, 5, 4, 2, 1 ]
 ```
 
 ### `pick`
@@ -299,7 +304,7 @@ Note: because no duplicates are allowed, _n_ cannot be greater than the list len
 
 ### `select`
 
-Select_n_ values from an array at random (allows duplicates).
+Select _n_ values from an array at random (allows duplicates).
 
 Signature:
 
