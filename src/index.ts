@@ -28,12 +28,6 @@ function randomBytes(n: number): Buffer  {
   return _randomBytes(n) as Buffer
 }
 
-const charList = [...'0123456789abcdef']
-
-// Pick three random characters from the list.
-const s = select(10, charList)
-console.log(s)
-
 export {
   randomBytes,
   randomBit,
