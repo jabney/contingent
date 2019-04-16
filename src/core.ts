@@ -97,8 +97,7 @@ function pick<T>(crypto: ICryptoLib, n: number, list: T[]): T[] {
     throw new Error(`num should be in the range [0, ${list.length}]`)
   }
 
-  const copy = list.slice()
-  shuffle(crypto, copy)
+  const copy = shuffle(crypto, list.slice())
   return copy.slice(-n)
 }
 
