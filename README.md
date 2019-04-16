@@ -277,7 +277,7 @@ shuffle([1, 2, 3, 4, 5]) // [ 3, 4, 5, 2, 1 ]
 
 ### `pick`
 
-Pick _n_ values from an array at random. Will not produce duplicates.
+Pick _n_ values from an array at random (no duplicates).
 
 Signature:
 
@@ -293,6 +293,28 @@ const charList = [...'contingent']
 
 // Pick three random characters from the list.
 pick(3, charList) // [ 'i', 't', 'c' ]
+```
+
+Note: because no duplicates are allowed, _n_ cannot be greater than the list length.
+
+### `select`
+
+Select_n_ values from an array at random (allows duplicates).
+
+Signature:
+
+```typescript
+export function select<T>(num: number, list: T[]): T[]
+```
+
+Usage:
+
+```typescript
+// Create an array of characters.
+const charList = [...'0123456789abcdef']
+
+// Pick ten random characters from the list.
+select(10, charList) // [ '1', 'a', '5', 'a', '9', 'e', '7', 'a', '8', '2' ]
 ```
 
 ### `replace`
