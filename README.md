@@ -138,7 +138,7 @@ randomBit() // true
 
 ### `randomByte`
 
-Return a random unsigned integer in the range [0, 255] (8 bits).
+Return a random unsigned integer in the range `[0, 255]` (8 bits).
 
 Signature:
 
@@ -154,7 +154,7 @@ randomByte() // 223
 
 ### `randomInt`
 
-Return a random signed integer in the range [-2147483648, 2147483647] (32 bits).
+Return a random signed integer in the range `[-2147483648, 2147483647]` (32 bits).
 
 Signature:
 
@@ -170,7 +170,7 @@ randomInt() // -656291091
 
 ### `randomUInt`
 
-Return a random unsigned integer in the range [0, 4294967295] (32 bits).
+Return a random unsigned integer in the range `[0, 4294967295]` (32 bits).
 
 Signature:
 
@@ -186,7 +186,7 @@ randomUInt() // 2444387034
 
 ### `randomFloat`
 
-Return a random unsigned float in the range [0, 1).
+Return a random unsigned float in the range `[0, 1)`.
 
 Signature:
 
@@ -202,7 +202,7 @@ randomFloat() // 0.14995522797107697
 
 ### `randomIn`
 
-Return an integer in the range [min, max), where max >= min.
+Return an integer in the range `[min, max)`, where max >= min.
 
 Signature:
 
