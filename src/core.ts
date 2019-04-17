@@ -128,7 +128,7 @@ function replace<T>(crypto: ICryptoLib, list: T[], value: T): T[] {
  *
  */
 function generate<T>(len: number, create: CreateFn<T>): T[] {
-  return new Array(len).fill(0).map(create)
+  return new Array(len).fill(0).map(() => create())
 }
 
 export function core(crypto: ICryptoLib) {
