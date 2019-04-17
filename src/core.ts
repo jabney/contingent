@@ -59,19 +59,19 @@ function randomIn(crypto: ICryptoLib, min: number, max: number): number {
 /**
  *
  */
+function randomOf<T>(crypto: ICryptoLib, list: T[]): T {
+  return list[randomIn(crypto, 0, list.length)]
+}
+
+/**
+ *
+ */
 function roll(crypto: ICryptoLib, n: number) {
   if (n <= 0) {
     throw new Error('<roll> sides should be >= 1')
   }
 
   return randomIn(crypto, 1, n + 1)
-}
-
-/**
- *
- */
-function randomOf<T>(crypto: ICryptoLib, list: T[]): T {
-  return list[randomIn(crypto, 0, list.length)]
 }
 
 /**
@@ -167,17 +167,17 @@ export function core(crypto: ICryptoLib) {
      */
     randomIn: (min: number, max: number) => randomIn(crypto, min, max),
     /**
-     * Roll a die of _n_ sides.
-     *
-     * @param n the number of die sides.
-     */
-    roll: (n: number) => roll(crypto, n),
-    /**
      * Return a random value from the given list.
      *
      * @param list the list from which to select a value.
      */
     randomOf: <T>(list: T[]) => randomOf(crypto, list),
+    /**
+     * Roll a die of _n_ sides.
+     *
+     * @param n the number of die sides.
+     */
+    roll: (n: number) => roll(crypto, n),
     /**
      * Shuffle elements of an array in place.
      *
