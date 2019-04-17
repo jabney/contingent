@@ -6,6 +6,26 @@ Create cryptographically-strong random numbers in node.js or the browser. Includ
 
 _Written in TypeScript and targets ES2015 JavaScript_
 
+Contents
+- [Installation](#installation)
+- [Usage](usage)
+- [Usage in the Browser](#usage-in-the-browser)
+- [Library Functions](#library-functions)
+  - [`randomBytes`](#randombytes) - return _n_ random bytes
+  - [`randomBit`](#randombit) - return a random boolean
+  - [`randomByte`](#randombyte) - return a random byte
+  - [`randomInt`](#randomint) - return a random signed integer
+  - [`randomUInt`](#randomuint) - return a random unsigned integer
+  - [`randomFloat`](#randomfloat) - return a random float
+  - [`randomIn`](#randomin) - return a random number in a range
+  - [`randomOf`](#randomof) - return a random value from an array
+  - [`roll`](#roll) - simulate a die roll
+  - [`shuffle`](#shuffle) - shuffle an array
+  - [`pick`](#pick) - pick _n_ values from an array (no duplicates)
+  - [`select`](#select) - pick _n_ values from an array (with duplicates)
+  - [`replace`](#replace) - replace an array element at random
+  - [`generate`](#generate) - generate an array of values
+
 ## Installation
 
 ```bash
