@@ -6,7 +6,8 @@ Create cryptographically-strong random numbers in node.js or the browser. Includ
 
 _Written in TypeScript and targets ES2015 JavaScript_
 
-Contents
+## Contents
+
 - [Installation](#installation)
 - [Usage](usage)
 - [Usage in the Browser](#usage-in-the-browser)
