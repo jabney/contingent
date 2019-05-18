@@ -71,7 +71,7 @@ Output:
 <Buffer e3 f2 87 3b bd 77 cf f2 cf ec>
 ```
 
-This is fine if you're shimming the `crypto` lib or using a build tool such as `browserify` which shims it for you. If `crypto` is not being shimmed, you can import the `browser` version of `contingent` like so:
+This is fine if you're shimming the `crypto` lib or using a build tool such as `webpack` or `browserify` which will shim it for you. If `crypto` is not being shimmed, you can import the `browser` version of `contingent` like so:
 
 ```typescript
 import { randomBytes } from 'contingent/lib/browser'
