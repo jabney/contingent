@@ -4,7 +4,8 @@
   "description": "Create cryptographically-strong random numbers in node.js or the browser",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run build-dist",
+    "build-dist": "webpack --config ./dist/webpack.config.js",
     "clean": "rm -rf lib",
     "test": "mocha lib/**/*.spec.js",
     "prepublishOnly": "npm run clean && npm run build"
