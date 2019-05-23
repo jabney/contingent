@@ -41,7 +41,8 @@
     "webpack-cli": "^3.3.2"
   },
   "files": [
-    "lib",
+    "lib/*.js",
+    "lib/*.d.ts",
     "dist/contingent.js"
   ]
 }
