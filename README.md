@@ -97,7 +97,7 @@ The `browser` module uses `window.crypto` with a fallback of `window.msCrypto`. 
 A `contingent` binary is available for use via a `script` tag:
 
 ```html
-<script src="node_modules/contingent/dist/contingent.js"></script>
+<script src="node_modules/contingent/dist/contingent.min.js"></script>
 ```
 
 All `contingent` library functions, including the `toArray` utility function, are available via the `contingent` global:
