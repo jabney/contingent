@@ -11,6 +11,7 @@ _Written in TypeScript and targets ES2015 JavaScript_
 - [Installation](#installation)
 - [Usage](usage)
 - [Usage in the Browser](#usage-in-the-browser)
+  - [Browser Distribution File](#browser-distribution-file)
 - [Library Functions](#library-functions)
   - [`randomBytes`](#randombytes) - return _n_ random bytes
   - [`randomBit`](#randombit) - return a random boolean
@@ -56,7 +57,7 @@ contingent.randomOf([1, 2, 3, 4, 5]) // 4
 
 ## Usage in the Browser
 
-By default, `contingent` uses Node.js `crytpo` under the hood to generate random bytes:
+By default, `contingent` uses Node.js `crytpo` under the hood to generate random bytes, which serve the rest of the library functions:
 
 ```typescript
 import { randomBytes } from 'contingent'
@@ -90,6 +91,31 @@ DataView {
 ```
 
 The `browser` module uses `window.crypto` with a fallback of `window.msCrypto`. If neither are found, `contingent` will throw an error for most function invocations, specifically functions which rely on _de novo_ random value generation.
+
+### Browser Distribution File
+
+A `contingent` binary is available for use via a `script` tag:
+
+```html
+<script src="node_modules/contingent/dist/contingent.js"></script>
+```
+
+All `contingent` library functions, including the `toArray` utility function, are available via the `contingent` global:
+
+```html
+<script>
+  var randomFloat = contingent.randomFloat
+  var randomBytes = contingent.randomBytes
+  var toArray = contingent.toArray
+
+  // Generate a random float.
+  console.log(randomFloat()) // 0.5113708488643169
+
+  // Generate an array of eight random bytes.
+  var bytes = toArray(randomBytes(8))
+  console.log(bytes) // [219, 93, 255, 210, 128, 148, 128, 76]
+</script>
+```
 
 ## Library Functions
 
