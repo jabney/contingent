@@ -65,7 +65,7 @@ typings/
 
 # Build files
 /lib
-/dist/contingent.js
+/dist/contingent.*
 
 # Temp
 /temp
