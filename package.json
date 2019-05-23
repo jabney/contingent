@@ -1,6 +1,6 @@
 {
   "name": "contingent",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Create cryptographically-strong random numbers in node.js or the browser",
   "main": "lib/index.js",
   "scripts": {
