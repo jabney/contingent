@@ -44,6 +44,7 @@
   "files": [
     "lib/*.js",
     "lib/*.d.ts",
-    "dist/contingent.js"
+    "dist/contingent.js",
+    "dist/contingent.min.js"
   ]
 }
