@@ -29,8 +29,11 @@
   },
   "homepage": "https://github.com/jabney/contingent#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.4",
+    "babel-loader": "^8.0.6",
     "mocha": "^6.1.4",
     "typescript": "^3.4.3",
     "webpack": "^4.32.2",
